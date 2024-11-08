@@ -1,0 +1,39 @@
+﻿@model CatsApplication18.Entities.Cat
+<form method="post">
+<div class="container">
+        <div asp-validation-summary="All"></div>
+    <div class="row mb-3">
+        <div class="col">
+          
+            <label class="form-label" asp-for="Name"></label>
+            <input class="form-control" asp-for="Name">
+                <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="col">
+            <label class="form-label" asp-for="Breed"></label>
+            <input class="form-control" asp-for="Breed">
+            <span asp-validation-for="Breed" class="text-danger"></span>
+        </div>
+        <div class="col">
+            <label class="form-label" asp-for="Age"></label>
+            <input class="form-control" asp-for="Age">
+            <span asp-validation-for="Age" class="text-danger"></span>
+        </div>
+    </div>
+        <div class="row mb-3">
+        <div class="col">
+            <button  type="submit">Create</button>
+        </div>
+        <div class="col">
+            <a asp-action="Index" asp-controller="Cat" class="btn btn-primary">Back</a>
+        </div>
+            </div>
+</div>
+</form>
+
+@section Scripts
+{
+    @{
+        <partial name="_ValidationScriptsPartial"/>
+    }
+}
